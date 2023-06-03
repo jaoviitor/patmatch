@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Assets/css/layout.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="Assets/image/logo.png" type="image/png">
+    <title>PetMatch</title>
+</head>
+<body>
+    <section id="area_king" class="position-absolute top-50 start-50 translate-middle">
+        <div class="container" id="menu_login">
+            <img class="img-fluid" src="Assets/image/logo.png" style="width:300px; height: 300px;">
+            <div class="text_reset">
+            <h5><b>Redefinir senha</b></h5>
+            <h6>Informe o e-mail para o qual<br>deseja redefinir a sua senha.</h6>
+            </div>
+            <form action="#" id="formulario" style="width: 100%; padding: 30px;">
+                <input type="email" minlength="10" maxlength="50" style="padding: 20px; margin-bottom: 10px; border-radius: 15px 15px; " class="form-control" id="NomeInput" placeholder="E-mail"><br>
+                <button type="submit" class="btn btn-primary" style="background-color:#0CC0DF; width:100%; padding: 15px; font-size: 20px; font-weight: 600; border-radius: 12px 12px;" > REDEFINIR SENHA</button>               
+            </form> <br><br>
+            <h6 style="position:relative; bottom:30px; text-align: center;"><label>Você receberá um e-mail no endereço informado contendo o procedimento para criar uma nova senha.</label></h6>
+            
+    </section>    
+    <script>
+        const form = document.querySelector('#formulario');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault(); // previne o envio padrão do formulário
+    
+    
+          const email = document.getElementById('NomeInput').value;
+          
+          const data = {
+              "Email": email
+          };
+    
+          fetch('http://localhost:3308/usuario/recuperarsenha', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => {
+            if (response.ok) {
+              alert('Email enviado com sucesso!');
+              window.location.href = 'Reset_senha.html';
+              form.reset();
+            } else {
+              throw new Error('Erro ao enviar email');
+            }
+          })
+          .catch(error => console.error(error));
+        });
+      </script>
+<script src="Assets/js/script.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>  
+</body>
+</html>

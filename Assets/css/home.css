@@ -1,0 +1,166 @@
+#container {
+    color: white;
+    display: flex; 
+    justify-content: center;
+    height: 100%;
+}
+
+.area_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     width: 700px;
+     border: 1px solid black; 
+     height: 100%;
+
+}
+
+.img_logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 50px;
+}
+
+#buttons_nav img {
+    position: relative;
+    top: 50px;
+    left: 100px;
+    margin-right:21.25px;
+    width: 30px;
+}
+
+#cards_area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_pets {
+    width: 40vh;
+    height: 300px;
+    border-radius: 15px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:#0CC0DF;
+}
+
+.circle_photo {
+ width: 100px;
+ background-image: url(https://i.ibb.co/yyy5dfH/barto.jpg);
+ background-size: 170px;
+ background-position-x: 140px;
+ background-repeat: repeat;
+ height: 100px;
+ border-radius: 200px;
+ margin: 10px;
+}
+.circle_photo2 {
+    width: 100px;
+    background-image: url(https://i.ibb.co/B6P2GDY/frank.jpg);
+    background-size: 170px;
+    background-position-x: 140px;
+    background-repeat: repeat;
+    height: 100px;
+    border-radius: 200px;
+    margin: 10px;
+}
+.circle_photo3 {
+    width: 100px;
+    background-image: url(https://i.ibb.co/yV4f1c6/akira.jpg);
+    background-size: 170px;
+    background-position-x: 140px;
+    background-repeat: repeat;
+    height: 100px;
+    border-radius: 200px;
+    margin: 10px;
+}
+
+.area_text_card {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.area_button svg:hover {
+    cursor: pointer;
+}
+
+#stats {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.image1{
+ margin-left: 100px;
+ width: 180px;
+ height: 226px;
+ border-radius: 15px;
+ background-image: url(https://i.ibb.co/5c409Tr/image2.jpg);
+ background-size: 400px;
+ background-position-x: -130px;
+ background-position-y: -30px;
+}
+.image2 {
+ margin-right: 100px;
+ width: 180px;
+ height: 226px;
+ border-radius: 15px;
+ background-image: url(https://i.ibb.co/J27qYdC/image1.jpg);
+ background-size: 400px;
+ background-position-x: -130px;
+}
+
+.border_list{
+    position: relative;
+    bottom: 30px;
+    left: 110px;
+    width: 70%;
+    border-bottom: 1px solid #0CC0DF;
+    ;
+}
+.text_blue {
+    background-color: #0CC0DF;
+    width: 150px;
+    color: black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    align-items: center;
+    margin-top: 30px;
+}
+.title_article h5 {
+    color: black;
+    font-weight: 200;
+}
+.title_article {
+    margin-left: 100px;
+}
+
+.article1 img {
+ margin-top: 30px;   
+ width: 426px;
+ height: 300px;
+ margin-left: 100px;
+ margin-bottom: 20px;
+ border-radius: 15px;
+}
+
+.footer_menu img {
+    
+    width: 50px;
+    height: 50px;
+
+}
+
+.footer_menu img:hover {
+    cursor: pointer;
+}
